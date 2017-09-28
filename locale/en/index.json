@@ -1,0 +1,30 @@
+{
+    "questionAreaDescription" : "I can help you with the next steps if you lost, find our item or if you'd like to get more information abount our servives.",
+    "lost" : "Lost",
+    "found" : "Found",
+    "services" : "Services and Products",
+    "faq" : "FAQ",
+    "about" : "About",
+    "greetings" : "Hello! I am MySefety Bot! Type lang to change language anytime",
+    "continue" : "Let's continue. Ok?",
+    "Yes" : "Yes",
+    "No" : "No",
+    "ReturnMainMenu" : "We are done with this question. Return to the list of questions?",
+    "DoneInLost" : "Your request has been sent!",
+    "Buy" : "Thank you! Buy!",
+    "end_of_branch" : "This is all I can help you with now. Would you like see Main Menu again?",
+
+    "found_optionsQuestion" : "Great! How would you like to file the case?",
+    "found_optionsQuestion1" : "Call our call-center",
+    "found_optionsQuestion2" : "Request call-back",
+    "found_optionsQuestion3" : "Submit online",
+    "OurPhoneNumber" : "Call us at 044-250-00-00",
+    "LinkOnOurWebSite" : "Fill the form at http://www.mysafety.com.ua",
+
+    "lost_callcenter" : "Call our callcenter",
+    "lost_make_lost_request" : "Craete lost request",
+    "lost_block_phone" : "Lock your phone",
+    "lost_callcenter_number": "Callcenter number is 0 800 508 112",
+    "lost_block_phone_instructions" : "How to block your lost phone: please follow the steps."
+
+}

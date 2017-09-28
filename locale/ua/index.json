@@ -1,0 +1,30 @@
+{
+   "questionAreaDescription" : "Я можу вам допомогти, якщо ви втратили або знайшли нашу річ. Також, якщо вас цікавить інформація про наші севіси",
+    "lost" : "Загубив",
+    "found" : "Знайшов",
+    "services" : "Сервіси та продукти",
+    "faq" : "Питання та відповіді",
+    "about" : "Про компані",
+    "greetings" : "Привіт! Я MySefety Бот! Type 'lang' anytime to change language",
+    "continue" : "Добре. Продовжуємо?",
+    "Yes" : "Так",
+    "No" : "Ні",
+    "ReturnMainMenu" : "Я відповів на всі питання в цьому напрямку. Повернутись до переліки питинь?",
+    "DoneInLost" : "Ваш запит надысланий!",
+    "Buy" : "Дякуємо! На все добре!",
+    "end_of_branch" : "Це все, чим я можу зараз допомогти. Чи бажаєти повернутись в Головне Меню?",
+
+    "found_optionsQuestion" : "Чудово! Як вам буде зручніше сформувати запит?",
+    "found_optionsQuestion1" : "Зателефонувати нам в колл-центр",
+    "found_optionsQuestion2" : "Замовити зворотній дзвінок",
+    "found_optionsQuestion3" : "Заповнити заявку online",
+    "OurPhoneNumber" : "Зателефонуйте нам 044-250-00-00",
+    "LinkOnOurWebSite" : "Заповніть форму на сайте  http://www.mysafety.com.ua",
+
+    "lost_callcenter" : "зателефонувати до колл-центру",
+    "lost_make_lost_request" : "Створити заявку",
+    "lost_block_phone" : "Заблокувати телефон",
+    "lost_callcenter_number": "Номер нашего колцентра: 0 800 508 112",
+    "lost_block_phone_instructions" : "Как Заблокувати телефон телефон: Інструкція."
+
+}

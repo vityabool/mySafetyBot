@@ -1,0 +1,22 @@
+{
+    "questionAreaDescription" : "Я могу помочь вам, если вы потеряли, нашли нашу вещь. Так же, если вас интересует информация о наших сервисах",
+     "lost" : "Потерял",
+    "found" : "Нашел",
+    "services" : "Сервисы и Продукты",
+    "faq" : "Вопросы и Ответы",
+    "about" : "О компании",
+    "greetings" : "Привет! Я MySefety Бот! Type 'lang' anytime to change language",
+    "continue" : "Хорошо. Продолжаем?",
+    "Yes" : "Да",
+    "No" : "Нет",
+    "ReturnMainMenu" : "Я ответил на все вопросы в этом направлении. Вернуться к списку вопросов?",
+    "DoneInLost" : "Ваш вопрос отправлен!",
+    "Buy" : "Спасибо! До свиданья!",
+
+    "found_optionsQuestion" : "Прекрастно! Как вам будет удобно оформить запрос?",
+    "found_optionsQuestion1" : "Позвонить нам в колл-центр",
+    "found_optionsQuestion2" : "Запросить обратный звонок",
+    "found_optionsQuestion3" : "Заполнить заявку online",
+    "OurPhoneNumber" : "Позвоните нам 044-250-00-00",
+    "LinkOnOurWebSite" : "Заполните форму на сайте  http://www.mysafety.com.ua"
+}
