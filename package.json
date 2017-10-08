@@ -1,0 +1,24 @@
+{
+  "name": "mysafetybot",
+  "version": "1.0.0",
+  "description": "Bot for mySafety",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vityabool/mySafetyBot.git"
+  },
+  "keywords": [
+    "bot",
+    "mysafety"
+  ],
+  "author": "Viktor Tsykunov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vityabool/mySafetyBot/issues"
+  },
+  "homepage": "https://github.com/vityabool/mySafetyBot#readme"
+}
