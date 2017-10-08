@@ -25,6 +25,8 @@
     "lost_make_lost_request" : "Craete lost request",
     "lost_block_phone" : "Lock your phone",
     "lost_callcenter_number": "Callcenter number is 0 800 508 112",
-    "lost_block_phone_instructions" : "How to block your lost phone: please follow the steps."
+    "lost_block_phone_instructions" : "How to block your lost phone: please follow the steps.",
 
+    "help_message" : "Type: 'mian' to start from main menu; 'lang' to choose other language; 'ok' to continue",
+    "ok_to_continue" : "Type 'Ok' to continue"
 }
