@@ -14,10 +14,6 @@
     "Buy" : "Thank you! Buy!",
     "end_of_branch" : "This is all I can help you with now. Would you like see Main Menu again?",
 
-    "found_optionsQuestion" : "Great! How would you like to file the case?",
-    "found_optionsQuestion1" : "Call our call-center",
-    "found_optionsQuestion2" : "Request call-back",
-    "found_optionsQuestion3" : "Submit online",
     "OurPhoneNumber" : "Call us at 044-250-00-00",
     "LinkOnOurWebSite" : "Fill the form at http://www.mysafety.com.ua",
 
@@ -28,5 +24,52 @@
     "lost_block_phone_instructions" : "How to block your lost phone: please follow the steps.",
 
     "help_message" : "Type: 'mian' to start from main menu; 'lang' to choose other language; 'ok' to continue",
-    "ok_to_continue" : "Type 'Ok' to continue"
+    "ok_to_continue" : "Type 'Ok' to continue",
+
+
+    "itemType" : "What have you found?",
+    "itemType_device" : "Device",
+    "itemType_documents" : "Document",
+    "itemType_keys" : "Keys",
+    "itemType_animal" : "Pet",
+    "itemType_bag" : "Bag",
+    "itemType_other" : "Other",
+
+    "otherItemType" : "Could you specify what other thing have you found?",
+
+    "itemDescription" : "Describe it. Exmapple: Samsung phone J7; gray cat; HP notebook",
+    "name" : "What is your name?",
+    "id" : "What is MySafety ID number on the sticker or keychain? It has format YXXXXXX (Y - letter, X - digit)",
+    "foundTime" : "When have you found it?",
+    
+    "documentName" : "Whom the document belongs to? Could you spesify the full name?",
+    "documentNumber" : "What is the document number?",
+    
+    "contactMethod" : "How we can reach you",
+    "contactMethodAlt" : "How additionaly we can reach you",
+    "contact_phone" : "Phone",
+    "contact_email" : "E-mail",
+    "contact_mail" : "Paper mail",
+    "contact_none" : "None",
+    
+    "phone" : "What is your phone number? Please use full notation format: +380XXYYYZZZZ",
+    "email" : "What is your e-mail address?",
+    "mail" : "What is your postal address? Example: Anri Barbusa Str, 5-B, office 8, 03150, Kiev, Ukraine",
+
+    "additioanInfo" : "What additional information whoud you like to share us?",
+
+    "rep_itemType" : "Found item:",
+    "rep_itemDescription" : "Description:",
+    "rep_name" : "Name:",
+    "rep_id" : "Sticker ID:",
+    "rep_foundTime" : "Found time:",
+    "rep_documentName" : "Name on the document:",
+    "rep_documentNumber" : "Document number:",
+    "rep_contact" : "Contact method:",
+    "rep_altcontact" : "Alternative contact method:",
+    "rep_additionalInfo" : "Additional information: ", 
+    
+    "confirm_found_email" : "Would you like to submit this form?",
+    "found_summary" : "Here what we have got:"
+
 }

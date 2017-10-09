@@ -34,7 +34,13 @@ bot.dialog('lost', require('./dialogs/lost-dialog.js'));
 bot.dialog('found', require('./dialogs/found-dialog.js') );
 bot.dialog('localePicker', require('./dialogs/locale-dialog.js')).triggerAction({ matches: /^lang$/i });
 
-bot.dialog('help', require('./dialogs/help-dialog.js')).triggerAction({ matches: /^help$/i});
+bot.dialog('help', require('./dialogs/help-dialog.js')).triggerAction({ 
+        matches: /^help$/i,
+        onSelectAction: (session, args, next) => {
+            session.beginDialog(args.action, args);
+        }
+
+    });
 
 // Setting-up APIs
 var server = restify.createServer();

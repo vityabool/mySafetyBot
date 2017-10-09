@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/vityabool/mySafetyBot/issues"
   },
-  "homepage": "https://github.com/vityabool/mySafetyBot#readme"
+  "homepage": "https://github.com/vityabool/mySafetyBot#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.1.4",
+    "botbuilder": "^3.11.0",
+    "dotenv-extended": "^2.0.1",
+    "restify": "^6.0.1"
+  }
 }
