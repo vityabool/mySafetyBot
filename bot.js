@@ -4,10 +4,10 @@ var h = require('./helper.js');
 // require('dotenv-extended').load();
 
 // Create chat connector for communicating with the Bot Framework Service
-//var connector = new builder.ChatConnector({
-//    appId: process.env.MICROSOFT_APP_ID,
-//    appPassword: process.env.MICROSOFT_APP_PASSWORD
-// });
+var connector = new builder.ChatConnector({
+    appId: process.env.MICROSOFT_APP_ID,
+    appPassword: process.env.MICROSOFT_APP_PASSWORD
+ });
 
 var connector = new builder.ChatConnector();
 var bot = new builder.UniversalBot(connector, {
@@ -42,9 +42,9 @@ bot.dialog('help', require('./dialogs/help-dialog.js')).triggerAction({
 
     });
 
-// Setting-up APIs
+// Setup Restify Server
 var server = restify.createServer();
-server.listen (3388, function() {
-    console.log('%s listening at %s', server.name, server.url);
+server.listen(process.env.port || process.env.PORT || 3388, function () {
+   console.log('%s listening to %s', server.name, server.url); 
 });
 server.post('/api/messages', connector.listen());
