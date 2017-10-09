@@ -14,6 +14,7 @@ module.exports =
 
     function (session, results) {
         session.send("Ok");
+        session.endConversation();
         /*if (result.response.entity) {
             switch (result.response.entity) {
                 case session.localizer.gettext(session.preferredLocale(), "lost_callcenter"):
