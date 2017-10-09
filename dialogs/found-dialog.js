@@ -200,7 +200,7 @@ module.exports = [
     },
 
     function (session, result) {
-        if (result.response == "Yes") {
+        if (result.response.entity == "Yes") {
             // Sent e-mail
             var msg = {
                   to: process.env.CALL_CENTER_EMAIL,
@@ -210,9 +210,9 @@ module.exports = [
                 };
                 
             sgMail.send(msg);
-            session.send(msg);
-            
-            session.endConversation("found_end_dialog");
+            session.send(h.text(session,"found_end_dialog"));
+
+            session.endConversation();
         } 
         else {
             session.endDialog();

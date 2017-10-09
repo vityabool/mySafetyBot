@@ -70,6 +70,7 @@
     "rep_additionalInfo" : "Additional information: ", 
     
     "confirm_found_email" : "Would you like to submit this form?",
-    "found_summary" : "Here what we have got:"
+    "found_summary" : "Here what we have got:",
+    "found_end_dialog" : "You request has been submitted"
 
 }
