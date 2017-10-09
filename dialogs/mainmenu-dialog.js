@@ -13,7 +13,7 @@ module.exports =
             session.localizer.gettext(session.preferredLocale(), "about"),
         ];
 
-        builder.Prompts.choice(session, "questionAreaDescription", options, builder.ListStyle.button);
+        builder.Prompts.choice(session, "questionAreaDescription", options);
 
     },
     function (session, result) {
