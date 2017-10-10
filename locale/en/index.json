@@ -2,7 +2,7 @@
     "questionAreaDescription" : "I can help you with the next steps if you lost, find our item or if you'd like to get more information abount our servives.",
     "lost" : "Lost",
     "found" : "Found",
-    "services" : "Services and Products",
+    "services" : "Our Services",
     "faq" : "FAQ",
     "about" : "About",
     "greetings" : "Hello! I am MySefety Bot! Type lang to change language anytime",
@@ -22,6 +22,7 @@
     "lost_block_phone" : "Lock your phone",
     "lost_callcenter_number": "Callcenter number is 0 800 508 112",
     "lost_block_phone_instructions" : "How to block your lost phone: please follow the steps.",
+    "lost_nextsteps" : "Choose what has happend:",
 
     "help_message" : "Type: 'mian' to start from main menu; 'lang' to choose other language; 'ok' to continue",
     "ok_to_continue" : "Type 'Ok' to continue",

@@ -216,6 +216,7 @@ module.exports = [
         } 
         else {
             session.endDialog();
+            session.replaceDialog('mainmenu');
         }
     }
 
