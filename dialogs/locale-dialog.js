@@ -25,6 +25,7 @@ module.exports =
                 // Locale files loaded
                 session.send("Your preferred language is now %s.", results.response.entity);
                 session.endDialog("ok_to_continue");
+                session.replaceDialog('mainmenu');
                 
             } else {
                 // Problem loading the selected locale

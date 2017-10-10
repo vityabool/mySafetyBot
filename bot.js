@@ -31,7 +31,12 @@ bot.dialog('/', [
 // Dialogs definition
 bot.dialog('mainmenu', require('./dialogs/mainmenu-dialog.js')).triggerAction({ matches: /^main$/i});
 bot.dialog('lost', require('./dialogs/lost-dialog.js'));
-bot.dialog('found', require('./dialogs/found-dialog.js') );
+bot.dialog('found', require('./dialogs/found-dialog.js'));
+bot.dialog('services', require('./dialogs/services-dialog.js'));
+bot.dialog('faq', require('./dialogs/faq-dialog.js'));
+bot.dialog('about', require('./dialogs/about-dialog.js'));
+
+// Support dialogs
 bot.dialog('localePicker', require('./dialogs/locale-dialog.js')).triggerAction({ matches: /^lang$/i });
 
 bot.dialog('help', require('./dialogs/help-dialog.js')).triggerAction({ 

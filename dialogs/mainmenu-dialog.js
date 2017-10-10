@@ -25,8 +25,17 @@ module.exports =
                 case session.localizer.gettext(session.preferredLocale(), "found"):
                     session.beginDialog('found');
                     break;
-                default: 
-                    session.send("I do not understand." + result.response.entity + "  --  " + session.localizer.gettext(session.preferredLocale(), "lost"));
+                case session.localizer.gettext(session.preferredLocale(), "services"):
+                    session.beginDialog('services');
+                break;    
+                case session.localizer.gettext(session.preferredLocale(), "found"):
+                    session.beginDialog('faq');
+                break;
+                case session.localizer.gettext(session.preferredLocale(), "about"):
+                    session.beginDialog('about');
+                break;    
+                //default: 
+                //    session.send("I do not understand." + result.response.entity + "  --  " + session.localizer.gettext(session.preferredLocale(), "lost"));
             }
         }
     }
