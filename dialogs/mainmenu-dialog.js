@@ -28,7 +28,7 @@ module.exports =
                 case session.localizer.gettext(session.preferredLocale(), "services"):
                     session.beginDialog('services');
                 break;    
-                case session.localizer.gettext(session.preferredLocale(), "found"):
+                case session.localizer.gettext(session.preferredLocale(), "faq"):
                     session.beginDialog('faq');
                 break;
                 case session.localizer.gettext(session.preferredLocale(), "about"):
