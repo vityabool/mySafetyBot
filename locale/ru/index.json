@@ -1,6 +1,6 @@
 {
-    "questionAreaDescription" : "Я могу помочь вам, если вы потеряли, нашли нашу вещь. Так же, если вас интересует информация о наших сервисах",
-     "lost" : "Потерял",
+    "questionAreaDescription" : "Чем я могу вам помочь?",
+    "lost" : "Потерял",
     "found" : "Нашел",
     "services" : "Сервисы и Продукты",
     "faq" : "Вопросы и Ответы",
@@ -12,11 +12,65 @@
     "ReturnMainMenu" : "Я ответил на все вопросы в этом направлении. Вернуться к списку вопросов?",
     "DoneInLost" : "Ваш вопрос отправлен!",
     "Buy" : "Спасибо! До свиданья!",
+    "end_of_branch" : "Это все, чем я могу помочь. Перейти в главное меню?",
 
-    "found_optionsQuestion" : "Прекрастно! Как вам будет удобно оформить запрос?",
-    "found_optionsQuestion1" : "Позвонить нам в колл-центр",
-    "found_optionsQuestion2" : "Запросить обратный звонок",
-    "found_optionsQuestion3" : "Заполнить заявку online",
-    "OurPhoneNumber" : "Позвоните нам 044-250-00-00",
-    "LinkOnOurWebSite" : "Заполните форму на сайте  http://www.mysafety.com.ua"
+    "OurPhoneNumber" : "Позвонииь нам 044-250-00-00",
+    "LinkOnOurWebSite" : "Заполните форму на сайте http://www.mysafety.com.ua",
+
+    "lost_callcenter" : "Call our callcenter",
+    "lost_make_lost_request" : "Craete lost request",
+    "lost_block_phone" : "Lock your phone",
+    "lost_callcenter_number": "Callcenter number is 0 800 508 112",
+    "lost_block_phone_instructions" : "How to block your lost phone: please follow the steps.",
+    "lost_nextsteps" : "Choose what has happend:",
+
+    "help_message" : "Наберите: 'mian' для перехода в главное меню; 'lang' для выбора языка; 'ok' для продолжения",
+    "ok_to_continue" : "Продолжим?",
+
+
+    "itemType" : "Что вы нашли",
+    "itemType_device" : "Устройство",
+    "itemType_documents" : "Документ",
+    "itemType_keys" : "Ключи",
+    "itemType_animal" : "Питомца",
+    "itemType_bag" : "Сумку",
+    "itemType_other" : "Другое",
+
+    "otherItemType" : "Укажите, что вы нашли",
+
+    "itemDescription" : "Опишите находку. Пример: телефон Samsung J7; серый кот; ноутбук HP",
+    "name" : "Как вас зовут?",
+    "id" : "Какой номер MySafety указан на наклейке или брелке находки? Формат номера YXXXXXX (Y - буква, X - цифра)",
+    "foundTime" : "Когда вы его нашли? Укажите дату и время",
+    
+    "documentName" : "Кому пренадлежит документ? Укажите полное имя",
+    "documentNumber" : "Какой номер документа?",
+    
+    "contactMethod" : "Как мы можем с вами связаться?",
+    "contactMethodAlt" : "Укажите дополнительный канал связи",
+    "contact_phone" : "Телефон",
+    "contact_email" : "Электронная почта",
+    "contact_mail" : "Бумажная почта",
+    "contact_none" : "Никак",
+    
+    "phone" : "Какой ваш номер телефона? Укажите номер в полном виде: +380XXYYYZZZZ",
+    "email" : "Какой адрес вашей электронной почты?",
+    "mail" : "Какой ваш почтовый адрес? Пример: ул. Анри Барбюса, 5-B, офис 8, 03150, Киев, Украина",
+
+    "additioanInfo" : "Хотите ли вы сообщить нам дополнительную информацию?",
+
+    "rep_itemType" : "Найдено: ",
+    "rep_itemDescription" : "Описание: ",
+    "rep_name" : "Имя: ",
+    "rep_id" : "ID наклейки: ",
+    "rep_foundTime" : "Время находки: ",
+    "rep_documentName" : "Имя на документе: ",
+    "rep_documentNumber" : "Номер документа: ",
+    "rep_contact" : "Контакт: ",
+    "rep_altcontact" : "Альтернативный контакт: ",
+    "rep_additionalInfo" : "Дополнительная информация: ", 
+    
+    "confirm_found_email" : "Хотите ли вы отправить заявку?",
+    "found_summary" : "Полнная заявка:",
+    "found_end_dialog" : "Ваша заяака отправлена. Мы свяжемся с вами в ближайшее время."
 }
