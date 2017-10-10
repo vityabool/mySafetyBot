@@ -14,17 +14,64 @@
     "Buy" : "Дякуємо! На все добре!",
     "end_of_branch" : "Це все, чим я можу зараз допомогти. Чи бажаєти повернутись в Головне Меню?",
 
-    "found_optionsQuestion" : "Чудово! Як вам буде зручніше сформувати запит?",
-    "found_optionsQuestion1" : "Зателефонувати нам в колл-центр",
-    "found_optionsQuestion2" : "Замовити зворотній дзвінок",
-    "found_optionsQuestion3" : "Заповнити заявку online",
-    "OurPhoneNumber" : "Зателефонуйте нам 044-250-00-00",
-    "LinkOnOurWebSite" : "Заповніть форму на сайте  http://www.mysafety.com.ua",
+    "OurPhoneNumber" : "Позвонииь нам 044-250-00-00",
+    "LinkOnOurWebSite" : "Заполните форму на сайте http://www.mysafety.com.ua",
 
-    "lost_callcenter" : "зателефонувати до колл-центру",
-    "lost_make_lost_request" : "Створити заявку",
-    "lost_block_phone" : "Заблокувати телефон",
-    "lost_callcenter_number": "Номер нашего колцентра: 0 800 508 112",
-    "lost_block_phone_instructions" : "Как Заблокувати телефон телефон: Інструкція."
+    "lost_callcenter" : "Call our callcenter",
+    "lost_make_lost_request" : "Craete lost request",
+    "lost_block_phone" : "Lock your phone",
+    "lost_callcenter_number": "Callcenter number is 0 800 508 112",
+    "lost_block_phone_instructions" : "How to block your lost phone: please follow the steps.",
+    "lost_nextsteps" : "Choose what has happend:",
+
+    "help_message" : "Наберіть: 'mian' для переходу в головне меню; 'lang' для вибору мови; 'ok' для продовження",
+    "ok_to_continue" : "Продовжити?",
+
+
+    "itemType" : "Що ви знайшли?",
+    "itemType_device" : "Прилад",
+    "itemType_documents" : "Документ",
+    "itemType_keys" : "Ключі",
+    "itemType_animal" : "Тварину",
+    "itemType_bag" : "Сумку",
+    "itemType_other" : "Інше",
+
+    "otherItemType" : "Вкажіть, що ви знайшли",
+
+    "itemDescription" : "Опишіть знахідку. Приклад: телефон Samsung J7; сірий кіт; ноутбук HP",
+    "name" : "Вкажіть ваше ім'я",
+    "id" : "Який номер MySafety вказаний на наклейці або брелку? Формат номера YXXXXXX (Y - буква, X - цифра)",
+    "foundTime" : "Коли ви його знайшли? Вкажіть дату та час",
+    
+    "documentName" : "Кому належить документ? Вкажіть повне ім'я",
+    "documentNumber" : "Який номер документа?",
+    
+    "contactMethod" : "Як з вами зв'язатись?",
+    "contactMethodAlt" : "Вкажіть додатковий канал зв'язку",
+    "contact_phone" : "Телефон",
+    "contact_email" : "Електронна пошта",
+    "contact_mail" : "Звичайна пошта",
+    "contact_none" : "Ніяк",
+    
+    "phone" : "Який номер вашого телефона? Вкажіть номер у повному вигляді: +380XXYYYZZZZ",
+    "email" : "Яка адреса вашої електронної пошти?",
+    "mail" : "Яка ваша поштова адреса? Приклад: вул. Анрі Барбюса, 5-B, офіс 8, 03150, Київ, Україна",
+
+    "additioanInfo" : "Чи хочете ви надати додаткову інформацію?",
+
+    "rep_itemType" : "Знайдено: ",
+    "rep_itemDescription" : "Опис: ",
+    "rep_name" : "Ім'я: ",
+    "rep_id" : "ID наклейки: ",
+    "rep_foundTime" : "Час знаходки: ",
+    "rep_documentName" : "Ім'я на документі: ",
+    "rep_documentNumber" : "Номер документа: ",
+    "rep_contact" : "Контакт: ",
+    "rep_altcontact" : "Альтернативний контакт: ",
+    "rep_additionalInfo" : "Додаткова інформация: ", 
+    
+    "confirm_found_email" : "Чи хочете ви надіслати заявку?",
+    "found_summary" : "Повна заявка:",
+    "found_end_dialog" : "Ваша заяака відправлета. Мы зв'яжемось з вами найближчим часом."
 
 }
