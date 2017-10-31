@@ -72,6 +72,45 @@
     
     "confirm_found_email" : "Would you like to submit this form?",
     "found_summary" : "Here what we have got:",
-    "found_end_dialog" : "You request has been submitted"
+    "found_end_dialog" : "You request has been submitted",
+
+    "itemTypeLost" : "What have you lost?",
+    "itemTypeLost_device" : "Phone or Device",
+    "itemTypeLost_documents" : "Document",
+    "itemTypeLost_keys" : "Keys",
+    "itemTypeLost_animal" : "Pet",
+    "itemTypeLost_bag" : "Bag",
+    "itemTypeLost_other" : "Other",
+
+    "otherItemTypeLost" : "Could you specify what other thing have you found?",
+
+    "itemDescriptionLost" : "Describe it. Exmapple: Samsung phone J7; gray cat; HP notebook",
+    "nameLost" : "What is your name?",
+    "cityLost" : "In what city have you lost it?",
+    "idLost" : "What is MySafety ID number on the sticker or keychain? It has format YXXXXXX (Y - letter, X - digit)",
+    "foundTimeLost" : "When have you found it?",
+    "blockSIM" : "Would you to block SImcard for your device or phone (if any)?",
+    "policeCaseConfirm" : "Have you filed the case in police?",
+    "policeCaseRequired" : "You must file the case in police.",
+    "phoneLost" : "What is your contact phone number?",
+    "phoneLostAlt" : "What is you alternative phone number?",
+    "additioanInfoLost" : "What additional information whoud you like to share us?",
+
+    "replost_itemType" : "Found item:",
+    "replost_itemDescription" : "Description:",
+    "replost_name" : "Name:",
+    "replost_id" : "Sticker ID:",
+    "replost_city" : "City:",
+    "replost_lostTime" : "Lost time:",
+    "replost_blocksim" : "If to block SIM:",
+    "replost_police" : "If poluce case filed:",
+    "replost_phone" : "Contact phone:",
+    "replost_phonealt" : "Alternative contact phone:",
+    "replost_additionalInfo" : "Additional information:",
+
+    "lost_summary" : "Here what we have got:",
+    "confirmLostData" : "Submit request?",
+    "lostSubmitConfirm" : "Request submitted",
+    "lostTryAgain" : "Start lost dialog again?"
 
 }
