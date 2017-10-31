@@ -72,5 +72,44 @@
     
     "confirm_found_email" : "Хотите ли вы отправить заявку?",
     "found_summary" : "Полнная заявка:",
-    "found_end_dialog" : "Ваша заяака отправлена. Мы свяжемся с вами в ближайшее время."
+    "found_end_dialog" : "Ваша заяака отправлена. Мы свяжемся с вами в ближайшее время.",
+
+    "itemTypeLost" : "Что вы нашли",
+    "itemTypeLost_device" : "Устройство",
+    "itemTypeLost_documents" : "Документ",
+    "itemTypeLost_keys" : "Ключи",
+    "itemTypeLost_animal" : "Питомца",
+    "itemTypeLost_bag" : "Сумку",
+    "itemTypeLost_other" : "Другое",
+
+    "otherItemTypeLost" : "Укажите, что вы нашли",
+
+    "itemDescriptionLost" : "Опишите потерю. Пример: телефон Samsung J7; серый кот; ноутбук HP",
+    "nameLost" : "Как вас зовут?",
+    "idLost" : "Какой номер MySafety указан на наклейке или брелке находки? Формат номера YXXXXXX (Y - буква, X - цифра)",
+    "cityLost" : "В каком городе произошла потеря",
+    "foundTimeLost" : "Когда вы его нашли? Укажите дату и время в формате ГГГГ-ММ-ДД ЧЧ:ММ",
+    "blockSIM" : "Хотите ли вы заблокировать SIM карту на вашем устройстве (если она есть)?",
+    "policeCaseConfirm" : "Подали ли вы уже заявление в полицию?",
+    "policeCaseRequired" : "Вы должны подать заявление в полицию.",
+    "phoneLost" : "Какой ваш контактный номер телефона?",
+    "phoneLostAlt" : "Укажите альтернативный номер телефона?",
+    "additioanInfoLost" : "Хотите ли вы сообщить нам дополнительную информацию?",
+
+    "replost_itemType" : "Что вы потеряли:",
+    "replost_itemDescription" : "Описание:",
+    "replost_name" : "Имя:",
+    "replost_id" : "ID наклейки:",
+    "replost_city" : "Город:",
+    "replost_lostTime" : "Время утери:",
+    "replost_blocksim" : "Заблокировать SIM:",
+    "replost_police" : "Заявление в полицию:",
+    "replost_phone" : "Контактный телефон:",
+    "replost_phonealt" : "Дополнительный телефон:",
+    "replost_additionalInfo" : "Дополнительная информация:",
+
+    "lost_summary" : "Вот полная информация:",
+    "confirmLostData" : "Отправить запрос?",
+    "lostSubmitConfirm" : "Запрос отправлен",
+    "lostTryAgain" : "Начать диалог потери еще раз?"
 }

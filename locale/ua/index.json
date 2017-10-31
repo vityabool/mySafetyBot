@@ -57,7 +57,7 @@
     "email" : "Яка адреса вашої електронної пошти?",
     "mail" : "Яка ваша поштова адреса? Приклад: вул. Анрі Барбюса, 5-B, офіс 8, 03150, Київ, Україна",
 
-    "additioanInfo" : "Чи хочете ви надати додаткову інформацію?",
+    "additioanInfo" : "с",
 
     "rep_itemType" : "Знайдено: ",
     "rep_itemDescription" : "Опис: ",
@@ -72,6 +72,45 @@
     
     "confirm_found_email" : "Чи хочете ви надіслати заявку?",
     "found_summary" : "Повна заявка:",
-    "found_end_dialog" : "Ваша заяака відправлета. Мы зв'яжемось з вами найближчим часом."
+    "found_end_dialog" : "Ваша заяака відправлета. Мы зв'яжемось з вами найближчим часом.",
+
+    "itemTypeLost" : "Що ви знайшли?",
+    "itemTypeLost_device" : "Прилад",
+    "itemTypeLost_documents" : "Документ",
+    "itemTypeLost_keys" : "Ключі",
+    "itemTypeLost_animal" : "Тварину",
+    "itemTypeLost_bag" : "Сумку",
+    "itemTypeLost_other" : "Інше",
+
+    "otherItemTypeLost" : "Вкажіть, що ви знайшли",
+    
+    "itemDescriptionLost" : "Опишіть втрачене. Приклад: телефон Samsung J7; сірий кіт; ноутбук HP",
+    "nameLost" : "Вкажіть ваше ім'я",
+    "idLost" : "Який номер MySafety вказаний на наклейці або брелку? Формат номера YXXXXXX (Y - буква, X - цифра)",
+    "foundTimeLost" : "Коли ви його знайшли? Вкажіть дату та час у форматі РРРР-ММ-ДД ГГ:ХХ",
+    "cityLost" : "В якому неселеному пункті всталася втрата?",
+    "blockSIM" : "Чи хочете ви заблокувати SIM карту на вашому пристрої (якщо вона є)?",
+    "policeCaseConfirm" : "Чи подали ви заяву в поліцію?",
+    "policeCaseRequired" : "Ви маєте подати заяву до поліції.",
+    "phoneLost" : "Вкажіть контактний номер телефону?",
+    "phoneLostAlt" : "Вкажіть додатковий номер телефону (якщо є)?",
+    "additioanInfoLost" : "Чи хочете ви надати додаткову інформацію?",
+
+    "replost_itemType" : "Що ви загубили:",
+    "replost_itemDescription" : "Опис:",
+    "replost_name" : "Ім'я:",
+    "replost_id" : "ID наклейки:",
+    "replost_city" : "Місто:",
+    "replost_lostTime" : "Час втрати:",
+    "replost_blocksim" : "Блокувати SIM:",
+    "replost_police" : "Заява в поліцію:",
+    "replost_phone" : "Контактний телефон:",
+    "replost_phonealt" : "Додаткови телефон телефон:",
+    "replost_additionalInfo" : "Додаткова інформація:",
+
+    "lost_summary" : "Ось повнв інформація:",
+    "confirmLostData" : "Надіслати запит?",
+    "lostSubmitConfirm" : "Запит надіслано",
+    "lostTryAgain" : "Почати діалог втрати іще раз?"
 
 }
