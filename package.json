@@ -25,6 +25,7 @@
     "@sendgrid/mail": "^6.1.4",
     "botbuilder": "^3.11.0",
     "dotenv-extended": "^2.0.1",
+    "nodemailer": "^4.3.1",
     "restify": "^6.0.1"
   }
 }

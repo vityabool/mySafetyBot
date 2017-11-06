@@ -110,6 +110,8 @@
 
     "lost_summary" : "Вот полная информация:",
     "confirmLostData" : "Отправить запрос?",
+    "submittingRequest" : "Отправляю запрос...",
     "lostSubmitConfirm" : "Запрос отправлен",
+    "lostSubmitError" : "Ошибка во время отправки запроса. Заявке не отправлена!",
     "lostTryAgain" : "Начать диалог потери еще раз?"
 }

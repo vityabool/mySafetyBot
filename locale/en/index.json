@@ -88,7 +88,7 @@
     "nameLost" : "What is your name?",
     "cityLost" : "In what city have you lost it?",
     "idLost" : "What is MySafety ID number on the sticker or keychain? It has format YXXXXXX (Y - letter, X - digit)",
-    "foundTimeLost" : "When have you found it?",
+    "foundTimeLost" : "When have you lost it?",
     "blockSIM" : "Would you to block SImcard for your device or phone (if any)?",
     "policeCaseConfirm" : "Have you filed the case in police?",
     "policeCaseRequired" : "You must file the case in police.",
@@ -110,7 +110,9 @@
 
     "lost_summary" : "Here what we have got:",
     "confirmLostData" : "Submit request?",
+    "submittingRequest" : "Submitting request...",
     "lostSubmitConfirm" : "Request submitted",
+    "lostSubmitError" : "Error during request submission",
     "lostTryAgain" : "Start lost dialog again?"
 
 }
