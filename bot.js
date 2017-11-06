@@ -1,7 +1,7 @@
 var builder = require('botbuilder');
 var restify = require('restify');
 var h = require('./helper.js');
-// require('dotenv-extended').load();
+require('dotenv-extended').load();
 
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({

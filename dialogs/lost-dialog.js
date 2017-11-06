@@ -4,6 +4,8 @@ var h = require('../helper.js');
 var data = Object.create(require('../models/lost.js'));
 const sgMail = require('@sendgrid/mail');
 require('dotenv-extended').load();
+var storage = require('azure-storage');
+var guid = require('guid');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 module.exports = 
@@ -164,9 +166,53 @@ module.exports =
     },
 
     function (session, result) {
-        if (result.responce) {
-            session.send("lostSubmitConfirm");
-            session.replaceDialog('mainmenu');
+        if (result.response) {
+            // Writing record to Storage Table
+            
+            session.send("submittingRequest");
+
+            var entGen = storage.TableUtilities.entityGenerator;
+            var tableSvc = storage.createTableService(); 
+
+            var devType = 'other';
+            if (data.itemType.device) devType = "device";
+            if (data.itemType.document) devType = "documents";
+            if (data.itemType.keys) devType = "keys";
+            if (data.itemType.animal) devType = "animal";
+            if (data.itemType.bag) devType = "bag";
+
+            var d = new Date();
+            
+            var entry = {
+                PartitionKey: entGen.String(d.getUTCFullYear() + '-' + d.getUTCMonth() + '-' + d.getUTCDate()),
+                RowKey: entGen.String(guid.raw()),
+                itemType: entGen.String(devType),
+                itemDescription: entGen.String('My cool iphone'),
+                name: entGen.String(data.name),
+                id: entGen.String(data.id),
+                city: entGen.String(data.city),
+                lostTime: entGen.DateTime(data.lostTime),
+                sim: entGen.String(data.simBlock),
+                police: entGen.String(data.policeCase),
+                additionalPhone: entGen.String(data.additionalPhone),
+                phone: entGen.String(data.phone),
+                additioanInfo: entGen.String(data.additioanInfo)
+            }
+            
+            tableSvc.insertEntity('botLost',entry, function (error, result, response) {
+                if (!error) {
+                  // Entity inserted
+                  session.send(h.text(session,"lostSubmitConfirm"));
+                  //console.log(result);
+                  session.replaceDialog('mainmenu');
+                } 
+                else {
+                    // Somthing went wrong
+                    session.send(h.text(session,"lostSubmitError"))
+                    session.replaceDialog('mainmenu');
+                }
+            });
+        
         } else {
             builder.Prompts.confirm(session, "lostTryAgain");
         }

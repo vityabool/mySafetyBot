@@ -108,9 +108,11 @@
     "replost_phonealt" : "Додаткови телефон телефон:",
     "replost_additionalInfo" : "Додаткова інформація:",
 
-    "lost_summary" : "Ось повнв інформація:",
+    "lost_summary" : "Ось повна інформація:",
     "confirmLostData" : "Надіслати запит?",
+    "submittingRequest" : "Надсилаю запит...",
     "lostSubmitConfirm" : "Запит надіслано",
+    "lostSubmitError" : "Помилка під час відправки запиту. Заявке не відправлена!",
     "lostTryAgain" : "Почати діалог втрати іще раз?"
 
 }
