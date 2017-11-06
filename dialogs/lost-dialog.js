@@ -2,11 +2,11 @@
 var builder = require('botbuilder');
 var h = require('../helper.js');
 var data = Object.create(require('../models/lost.js'));
-const sgMail = require('@sendgrid/mail');
+//const sgMail = require('@sendgrid/mail');
 require('dotenv-extended').load();
 var storage = require('azure-storage');
 var guid = require('guid');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+var nodemailer = require('nodemailer');
 
 module.exports = 
 [
@@ -161,6 +161,7 @@ module.exports =
 
         session.send("lost_summary");
         session.send(message);
+        session.userData.message = message;
 
         builder.Prompts.confirm(session, "confirmLostData");
     },
@@ -184,10 +185,10 @@ module.exports =
             var d = new Date();
             
             var entry = {
-                PartitionKey: entGen.String(d.getUTCFullYear() + '-' + d.getUTCMonth() + '-' + d.getUTCDate()),
+                PartitionKey: entGen.String(d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate()),
                 RowKey: entGen.String(guid.raw()),
                 itemType: entGen.String(devType),
-                itemDescription: entGen.String('My cool iphone'),
+                itemDescription: entGen.String(data.itemDescription),
                 name: entGen.String(data.name),
                 id: entGen.String(data.id),
                 city: entGen.String(data.city),
@@ -201,10 +202,35 @@ module.exports =
             
             tableSvc.insertEntity('botLost',entry, function (error, result, response) {
                 if (!error) {
-                  // Entity inserted
-                  session.send(h.text(session,"lostSubmitConfirm"));
-                  //console.log(result);
-                  session.replaceDialog('mainmenu');
+                  // Entity inserted, sending e-mail
+                  var transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                      user: process.env.GMAIL_LOGIN,
+                      pass: process.env.GMAIL_PASSWORD
+                    }
+                  });
+                  
+                  var mailOptions = {
+                    from: 'MySafety Bot <' + process.env.GMAIL_LOGIN + '>',
+                    to: process.env.CALL_CENTER_EMAIL,
+                    subject: 'New Item Lost request from MySafety Bot',
+                    text: session.userData.message
+                  };
+
+                
+                  transporter.sendMail(mailOptions, function(error, info){
+                    if (error) {
+                        // Somthing went wrong
+                        session.send(h.text(session,"lostSubmitError"))
+                        session.replaceDialog('mainmenu');
+                    } else {
+                      console.log('Email sent: ' + info.response);
+                      session.send(h.text(session,"lostSubmitConfirm"));
+                      //console.log(result);
+                      session.replaceDialog('mainmenu');
+                    }
+                  }); 
                 } 
                 else {
                     // Somthing went wrong
