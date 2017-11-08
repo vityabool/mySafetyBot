@@ -17,18 +17,18 @@
     "LinkOnOurWebSite" : "Заполните форму на сайте http://www.mysafety.com.ua",
 
     "lost_callcenter" : "Call our callcenter",
-    "lost_make_lost_request" : "Craete lost request",
+    "lost_make_lost_request" : "Create lost request",
     "lost_block_phone" : "Lock your phone",
-    "lost_callcenter_number": "Callcenter number is 0 800 508 112",
+    "lost_callcenter_number": "Callcenter number is 044-499-69-11, 0 800 306 911",
     "lost_block_phone_instructions" : "How to block your lost phone: please follow the steps.",
-    "lost_nextsteps" : "Choose what has happend:",
+    "lost_nextsteps" : "Choose what has happened:",
 
-    "help_message" : "Наберіть: 'mian' для переходу в головне меню; 'lang' для вибору мови; 'ok' для продовження",
+    "help_message" : "Наберіть: 'main' для переходу в головне меню; 'lang' для вибору мови; 'ok' для продовження",
     "ok_to_continue" : "Продовжити?",
 
 
     "itemType" : "Що ви знайшли?",
-    "itemType_device" : "Прилад",
+    "itemType_device" : "Пристрій",
     "itemType_documents" : "Документ",
     "itemType_keys" : "Ключі",
     "itemType_animal" : "Тварину",
@@ -43,7 +43,7 @@
     "foundTime" : "Коли ви його знайшли? Вкажіть дату та час",
     
     "documentName" : "Кому належить документ? Вкажіть повне ім'я",
-    "documentNumber" : "Який номер документа?",
+    "documentNumber" : "Вкажіть серійний номер документа?",
     
     "contactMethod" : "Як з вами зв'язатись?",
     "contactMethodAlt" : "Вкажіть додатковий канал зв'язку",
@@ -66,7 +66,7 @@
     "rep_documentName" : "Ім'я на документі: ",
     "rep_documentNumber" : "Номер документа: ",
     "rep_contact" : "Контакт: ",
-    "rep_altcontact" : "Альтернативний контакт: ",
+    "rep_altcontact" : "Альтернативний номер телефону: ",
     "rep_additionalInfo" : "Додаткова інформация: ", 
     
     "confirm_found_email" : "Чи хочете ви надіслати заявку?",
