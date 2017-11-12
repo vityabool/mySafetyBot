@@ -113,6 +113,37 @@
     "submittingRequest" : "Надсилаю запит...",
     "lostSubmitConfirm" : "Запит надіслано",
     "lostSubmitError" : "Помилка під час відправки запиту. Заявке не відправлена!",
-    "lostTryAgain" : "Почати діалог втрати іще раз?"
+    "lostTryAgain" : "Почати діалог втрати іще раз?",
+
+    "QNAdefaultMessage" : "Не можу знайти відповідь за вашим запитанням. Спробуйте переформулювати ваше питання.",
+    "QNAInitialQuestion" : "Що вас цікавить?",
+    "QNAMoreQuestions" : "Задати іще одне питання?",
+
+    "ProductPetTitle" : "Безпека тварин",
+    "ProductPetSubTitle" : "349 грн / 1 рік",
+    "ProductPetText" : "Поверніть домашнього улюбленця",
+    
+    "ProductBagTitle" : "Безпека багажу",
+    "ProductBagSubTitle" : "299 грн / 1 рік",
+    "ProductBagText" : "Надасть можливість швидко повернути багаж ",
+
+    "ProductPhoneTitle" : "Безпека смартфона",
+    "ProductPhoneSubTitle" : "Від 3,50 грн / неділя",
+    "ProductPhoneText" : "Надасть можливість оперативно заблокувати телефон і забезпечить швидке повернення в разі його втрати",
+
+    "ProductKeysTitle" : "Безпека ключів",
+    "ProductKeysSubTitle" : "199 грн/ 1 рік",
+    "ProductKeysText" : "Надасть можливість повернути втрачені ключі",
+
+    "ProductKidsTitle" : "Безпека дітей",
+    "ProductKidsSubTitle" : "Новинка",
+    "ProductKidsText" : "Надасть можливість знайти дитину, яка загубилась",
+
+    "ProductDocumentsTitle" : "Безпека документів",
+    "ProductDocumentsSubTitle" : "249 грн / 1рік",
+    "ProductDocumentsText" : "Надасть можливість повернути втрачені документи",
+
+    "ProductMoreinfo" : "Дізнатись більше",
+    "ProductBackMain" : "Повернутись до головного меню?"
 
 }

@@ -113,6 +113,35 @@
     "submittingRequest" : "Submitting request...",
     "lostSubmitConfirm" : "Request submitted",
     "lostSubmitError" : "Error during request submission",
-    "lostTryAgain" : "Start lost dialog again?"
+    "lostTryAgain" : "Start lost dialog again?",
 
+    "QNAInitialQuestion" : "What are you inrested in?",
+    "QNAMoreQuestions" : "One more question?",
+
+    "ProductPetTitle" : "Pets security",
+    "ProductPetSubTitle" : "349 UAH / a yesr",
+    "ProductPetText" : "Return your pet",
+    
+    "ProductBagTitle" : "Luggage security",
+    "ProductBagSubTitle" : "299 UAH / a year",
+    "ProductBagText" : "Gives ability to return you luggage quickly",
+
+    "ProductPhoneTitle" : "Smartphone security",
+    "ProductPhoneSubTitle" : "from 3.50 UAH / a week",
+    "ProductPhoneText" : "Gives ability to quickly block your phone and enshure fast return", 
+
+    "ProductKeysTitle" : "Keys security",
+    "ProductKeysSubTitle" : "199 UAH/ a year",
+    "ProductKeysText" : "Give ability to return lost keys",
+
+    "ProductKidsTitle" : "Kids security",
+    "ProductKidsSubTitle" : "New!",
+    "ProductKidsText" : "Gives ability to fing lost kids",
+
+    "ProductDocumentsTitle" : "Documents security",
+    "ProductDocumentsSubTitle" : "249 UAH / a yesr",
+    "ProductDocumentsText" : "Gives ability to return lost documents",
+
+    "ProductMoreinfo" : "Learn more",
+    "ProductBackMain" : "Back to the main menu?"
 }

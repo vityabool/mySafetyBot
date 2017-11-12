@@ -113,5 +113,35 @@
     "submittingRequest" : "Отправляю запрос...",
     "lostSubmitConfirm" : "Запрос отправлен",
     "lostSubmitError" : "Ошибка во время отправки запроса. Заявке не отправлена!",
-    "lostTryAgain" : "Начать диалог потери еще раз?"
+    "lostTryAgain" : "Начать диалог потери еще раз?",
+
+    "QNAInitialQuestion" : "Что вас интересует?",
+    "QNAMoreQuestions" : "Задачть еще один вопрос?",
+
+    "ProductPetTitle" : "Безопастность животных",
+    "ProductPetSubTitle" : "349 грн / 1 год",
+    "ProductPetText" : "Верните домашнего любимца",
+    
+    "ProductBagTitle" : "Безопастность багажа",
+    "ProductBagSubTitle" : "299 грн / 1 год",
+    "ProductBagText" : "Дает возможность бысьро вернуть ваш багаж",
+
+    "ProductPhoneTitle" : "Безопстность смартфона",
+    "ProductPhoneSubTitle" : "От 3,50 грн / в неделю",
+    "ProductPhoneText" : "Дает возможность оперативно заблокировать телефон и обеспечить быстрый его возврат в случае его утраты",
+
+    "ProductKeysTitle" : "Безопастность ключей",
+    "ProductKeysSubTitle" : "199 грн/ 1 год",
+    "ProductKeysText" : "Дает возможность вернуть потерянные ключи",
+
+    "ProductKidsTitle" : "Безопастность детей",
+    "ProductKidsSubTitle" : "Новинка",
+    "ProductKidsText" : "Дает возможность найтие ребенка, который потерялся",
+
+    "ProductDocumentsTitle" : "Безопастность документов",
+    "ProductDocumentsSubTitle" : "249 грн / в год",
+    "ProductDocumentsText" : "Дает возможность вернуть потерянные документы",
+
+    "ProductMoreinfo" : "Узнать больше",
+    "ProductBackMain" : "Вернуться к главному меню?"
 }
