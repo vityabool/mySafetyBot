@@ -3,11 +3,18 @@ var h = require('../helper.js');
 
 module.exports = [
     function (session) {
-        session.send("About message");
-        builder.Prompts.choice(session, "Back to Main menu", ["OK"]);
+        
+        var vcard = require('../locale/ua/about.json');
+
+        var msg = new builder.Message(session)
+        .addAttachment(vcard);
+
+        session.send(msg);
+
+        builder.Prompts.confirm(session, "Повернутись до головного меню?");
     },
 
-    function (session, result) {
-        session.replaceDialog('mainmenu');
+    function (session, results) {
+       session.replaceDialog('mainmenu');
     }
 ]

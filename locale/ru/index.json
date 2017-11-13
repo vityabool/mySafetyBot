@@ -5,6 +5,7 @@
     "services" : "Сервисы и Продукты",
     "faq" : "Вопросы и Ответы",
     "about" : "О компании",
+    "exit" : "Завершить",
     "greetings" : "Привет! Я MySefety Бот! Type 'lang' anytime to change language",
     "continue" : "Хорошо. Продолжаем?",
     "Yes" : "Да",
@@ -143,5 +144,7 @@
     "ProductDocumentsText" : "Дает возможность вернуть потерянные документы",
 
     "ProductMoreinfo" : "Узнать больше",
-    "ProductBackMain" : "Вернуться к главному меню?"
+    "ProductBackMain" : "Вернуться к главному меню?",
+
+    "ExitMessage" : "До свиданья!"
 }

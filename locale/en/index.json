@@ -5,6 +5,7 @@
     "services" : "Our Services",
     "faq" : "FAQ",
     "about" : "About",
+    "exit" : "Exit",
     "greetings" : "Hello! I am MySefety Bot! Type lang to change language anytime",
     "continue" : "Let's continue. Ok?",
     "Yes" : "Yes",
@@ -143,5 +144,7 @@
     "ProductDocumentsText" : "Gives ability to return lost documents",
 
     "ProductMoreinfo" : "Learn more",
-    "ProductBackMain" : "Back to the main menu?"
+    "ProductBackMain" : "Back to the main menu?",
+
+    "ExitMessage" : "Goodbuy!"
 }

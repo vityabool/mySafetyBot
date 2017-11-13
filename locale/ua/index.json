@@ -144,6 +144,8 @@
     "ProductDocumentsText" : "Надасть можливість повернути втрачені документи",
 
     "ProductMoreinfo" : "Дізнатись більше",
-    "ProductBackMain" : "Повернутись до головного меню?"
+    "ProductBackMain" : "Повернутись до головного меню?",
+
+    "ExitMessage" : "До побачення!"
 
 }

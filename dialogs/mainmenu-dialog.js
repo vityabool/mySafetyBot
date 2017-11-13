@@ -11,6 +11,7 @@ module.exports =
             session.localizer.gettext(session.preferredLocale(), "services"),
             session.localizer.gettext(session.preferredLocale(), "faq"),
             session.localizer.gettext(session.preferredLocale(), "about"),
+            session.localizer.gettext(session.preferredLocale(), "exit"),
         ];
 
         builder.Prompts.choice(session, "questionAreaDescription", options);
@@ -33,6 +34,9 @@ module.exports =
                 break;
                 case session.localizer.gettext(session.preferredLocale(), "about"):
                     session.beginDialog('about');
+                break;
+                case session.localizer.gettext(session.preferredLocale(), "exit"):
+                    session.beginDialog('exit');
                 break;    
                 //default: 
                 //    session.send("I do not understand." + result.response.entity + "  --  " + session.localizer.gettext(session.preferredLocale(), "lost"));

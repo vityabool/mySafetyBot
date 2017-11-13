@@ -34,6 +34,7 @@ bot.dialog('found', require('./dialogs/found-dialog.js'));
 bot.dialog('services', require('./dialogs/services-dialog.js'));
 bot.dialog('faq', require('./dialogs/faq-dialog.js'));
 bot.dialog('about', require('./dialogs/about-dialog.js'));
+bot.dialog('exit', require('./dialogs/exit-dialog.js'));
 
 // QNA Dialogs definitions
 var ua_recognizer = new cognitiveservices.QnAMakerRecognizer({
@@ -56,7 +57,7 @@ var ru_qnadialog = new cognitiveservices.QnAMakerDialog({
 	defaultMessage: 'Не могу найти ответ на ваш вопрос. Попробуйте его переформулировать.',
     qnaThreshold: process.env.QNA_THRESHOLD});
 
-bot.dialog('ru_qna', ua_qnadialog);
+bot.dialog('ru_qna', ru_qnadialog);
 
 var en_recognizer = new cognitiveservices.QnAMakerRecognizer({
 	knowledgeBaseId: process.env.QNA_EN_KBID, 
@@ -67,7 +68,7 @@ var en_qnadialog = new cognitiveservices.QnAMakerDialog({
 	defaultMessage: 'I cannot find mutch for your question. Try to change it',
     qnaThreshold: process.env.QNA_THRESHOLD});
 
-bot.dialog('en_qna', ua_qnadialog);
+bot.dialog('en_qna', en_qnadialog);
 
 // Support dialogs
 bot.dialog('localePicker', require('./dialogs/locale-dialog.js')).triggerAction({ matches: /^lang$/i });
