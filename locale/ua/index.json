@@ -4,8 +4,14 @@
     "found" : "Знайшов",
     "services" : "Сервіси та продукти",
     "faq" : "Питання та відповіді",
+<<<<<<< HEAD
     "about" : "Про компаню",
     "greetings" : "Привіт! Я MySafety Бот! Type 'lang' anytime to change language",
+=======
+    "about" : "Про компанію",
+    "exit" : "Завершити",
+    "greetings" : "Привіт! Я MySefety Бот! Type 'lang' anytime to change language",
+>>>>>>> dev
     "continue" : "Добре. Продовжуємо?",
     "Yes" : "Так",
     "No" : "Ні",
