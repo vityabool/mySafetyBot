@@ -1,9 +1,12 @@
 var builder = require('botbuilder');
 var h = require('../helper.js');
 var data = Object.create(require('../models/found.js'));
-const sgMail = require('@sendgrid/mail');
+//const sgMail = require('@sendgrid/mail');
 require('dotenv-extended').load();
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+//sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+var storage = require('azure-storage');
+var guid = require('guid');
+var nodemailer = require('nodemailer');
 
 
 
@@ -77,7 +80,7 @@ module.exports = [
         if (data.itemType.document) 
             builder.Prompts.text(session, "documentName");
         else
-            builder.Prompts.text(session, "foundTime");
+            builder.Prompts.time(session, "foundTime");
     },
 
     function (session, result, next) {
@@ -85,7 +88,7 @@ module.exports = [
             data.documentName = result.response;
             builder.Prompts.text(session, "documentNumber");
         } else {
-            data.foundTime = result.response;
+            data.foundTime = builder.EntityRecognizer.resolveTime([result.response]);
             next();
         }
     },
@@ -93,14 +96,14 @@ module.exports = [
     function (session, result, next) {
         if (data.itemType.document) {
             data.documentNumber = result.response;
-            builder.Prompts.text(session, "foundTime");
+            data.foundTime = builder.EntityRecognizer.resolveTime([result.response]);
         } else {
             next();
         }
     },
 
     function (session, result) {
-        if (!data.foundTime) data.foundTime = result.response;
+        if (!data.foundTime) data.foundTime = builder.EntityRecognizer.resolveTime([result.response]);
         //session.send(JSON.stringify(data));
         
         var options = [
@@ -168,9 +171,9 @@ module.exports = [
     },
 
     function (session, result) {
-        if (data.contactMethod.phone) data.phone = result.response;
-        if (data.contactMethod.email) data.email = result.response;
-        if (data.contactMethod.mail) data.mail = result.response;
+        if (data.contactMethodAlt.phone) data.altphone = result.response;
+        if (data.contactMethodAlt.email) data.altemail = result.response;
+        if (data.contactMethodAlt.mail) data.altmail = result.response;
 
         //session.send(JSON.stringify(data));
 
@@ -182,6 +185,17 @@ module.exports = [
 
         //session.send(JSON.stringify(data));
 
+        var contact = "";
+        if (data.contactMethod.phone) contact = h.text(session,"rep_contact_phone") + data.phone;
+        if (data.contactMethod.email) contact = h.text(session,"rep_contact_email") + data.email;
+        if (data.contactMethod.mail) contact = h.text(session,"rep_contact_mail") + data.mail;
+
+        var altcontact = "";
+        if (data.contactMethodAlt.phone) altcontact = h.text(session,"rep_altcontact_phone") + data.altphone;
+        if (data.contactMethodAlt.email) altcontact = h.text(session,"rep_altcontact_email") + data.altemail;
+        if (data.contactMethodAlt.mail) altcontact = h.text(session,"rep_altcontact_mail") + data.altmail;
+
+
         var message = 
             h.text(session,"rep_itemType") + ' ' + data.getitemType() + '\n\n' +
             h.text(session,"rep_itemDescription") + ' ' + data.itemDescription + '\n\n' +
@@ -189,19 +203,121 @@ module.exports = [
             h.text(session,"rep_id") + ' ' + data.id + '\n\n' +
             h.text(session,"rep_foundTime") + ' ' + data.foundTime + '\n\n' +
             h.text(session,"rep_documentNumber") + ' ' + data.documentNumber + '\n\n' +
-            h.text(session,"rep_contact") + ' ' + data.phone + '\n\n' +
-            h.text(session,"rep_altcontact") + ' ' + data.email + '\n\n' +
+            contact + '\n\n' +
+            altcontact + '\n\n' +
             h.text(session,"rep_additionalInfo") + ' ' + data.additioanInfo + '\n\n';
 
             session.send("found_summary");
             session.send(message);
             session.userData.message = message;
-            builder.Prompts.choice(session,"confirm_found_email", ["Yes", "No"]);
+            builder.Prompts.confirm(session,"confirm_found_email");
     },
 
     function (session, result) {
-        if (result.response.entity == "Yes") {
-            // Sent e-mail
+        if (result.response) {
+            // Writing record to Storage Table
+            
+            session.send("submittingRequest");
+
+            var entGen = storage.TableUtilities.entityGenerator;
+            var tableSvc = storage.createTableService(); 
+
+            var devType = 'other';
+            if (data.itemType.device) devType = "device";
+            if (data.itemType.document) devType = "documents";
+            if (data.itemType.keys) devType = "keys";
+            if (data.itemType.animal) devType = "animal";
+            if (data.itemType.bag) devType = "bag";
+
+            var d = new Date();
+
+            var entry = {
+                PartitionKey: entGen.String(d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate()),
+                RowKey: entGen.String(guid.raw()),
+                itemType: entGen.String(devType),
+                itemDescription: entGen.String(data.itemDescription),
+                name: entGen.String(data.name),
+                id: entGen.String(data.id),
+                foundTime: entGen.DateTime(data.foundTime),
+                documentNumber: entGen.String(data.documentNumber),
+                phone: entGen.String(data.phone),
+                email: entGen.String(data.email),
+                mail: entGen.String(data.mail),
+                altphone: entGen.String(data.altphone),
+                altemail: entGen.String(data.altemail),
+                altmail: entGen.String(data.altmail),
+                additioanInfo: entGen.String(data.additioanInfo)
+            }
+          
+    /*        var entry = {
+                PartitionKey: entGen.String(d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate()),
+                RowKey: entGen.String(guid.raw()),
+                itemType: entGen.String(devType),
+                itemDescription: entGen.String(data.itemDescription),
+                name: entGen.String(data.name),
+                id: entGen.String(data.id),
+                foundTime: entGen.DateTime(data.foundTime),
+                documentNumber: entGen.String(data.documentNumber)
+
+            }
+            */
+            
+            tableSvc.insertEntity('botFound', entry, function (error, result, response) {
+                if (!error) {
+                  // Entity inserted, sending e-mail
+                  var transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                      user: process.env.GMAIL_LOGIN,
+                      pass: process.env.GMAIL_PASSWORD
+                    }
+                  });
+                  
+                  var mailOptions = {
+                    from: 'MySafety Bot <' + process.env.GMAIL_LOGIN + '>',
+                    to: process.env.CALL_CENTER_EMAIL,
+                    subject: 'New Found request from MySafety Bot',
+                    text: session.userData.message
+                  };
+
+                
+                  transporter.sendMail(mailOptions, function(error, info){
+                    if (error) {
+                        // Somthing went wrong
+                        session.send(h.text(session,"foundSubmitError"))
+                        session.replaceDialog('mainmenu');
+                    } else {
+                      console.log('Email sent: ' + info.response);
+                      session.send(h.text(session,"foundSubmitConfirm"));
+                      //console.log(result);
+                      session.replaceDialog('mainmenu');
+                    }
+                  }); 
+                } 
+                else {
+                    // Somthing went wrong
+                    session.send(h.text(session,"foundSubmitError"))
+                    session.replaceDialog('mainmenu');
+                }
+            });
+        
+        } else {
+            builder.Prompts.confirm(session, "foundTryAgain");
+        }
+    },
+    
+    function (session, result) {
+        if (result.responce) {
+            session.replaceDialog('found');
+        } 
+        else {
+            session.replaceDialog('mainmenu');
+        }
+    }
+
+]
+
+/*
             var msg = {
                   to: process.env.CALL_CENTER_EMAIL,
                   from: 'mySafety BOT <bot@mysafety.ua>',
@@ -213,11 +329,4 @@ module.exports = [
             session.send(h.text(session,"found_end_dialog"));
 
             session.endConversation();
-        } 
-        else {
-            session.endDialog();
-            session.replaceDialog('mainmenu');
-        }
-    }
-
-]
+*/

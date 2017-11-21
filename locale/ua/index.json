@@ -58,7 +58,7 @@
     "email" : "Яка адреса вашої електронної пошти?",
     "mail" : "Яка ваша поштова адреса? Приклад: вул. Анрі Барбюса, 5-B, офіс 8, 03150, Київ, Україна",
 
-    "additioanInfo" : "с",
+    "additioanInfo" : "Чи хочете ви надати додаткову інформацію?",
 
     "rep_itemType" : "Знайдено: ",
     "rep_itemDescription" : "Опис: ",
@@ -67,13 +67,20 @@
     "rep_foundTime" : "Час знаходки: ",
     "rep_documentName" : "Ім'я на документі: ",
     "rep_documentNumber" : "Номер документа: ",
-    "rep_contact" : "Контакт: ",
-    "rep_altcontact" : "Альтернативний контакт: ",
+    "rep_contact_phone" : "Контактний телефон: ",
+    "rep_contact_email" : "Електронна пошта: ",
+    "rep_contact_mail" : "Поштова адреса: ",
+    "rep_altcontact_phone" : "Альтернативний телефон: ",
+    "rep_altcontact_email" : "Альтернативна електронна пошта: ",
+    "rep_altcontact_mail" : "Альтернативна поштова адреса: ",
     "rep_additionalInfo" : "Додаткова інформация: ", 
     
     "confirm_found_email" : "Чи хочете ви надіслати заявку?",
     "found_summary" : "Повна заявка:",
-    "found_end_dialog" : "Ваша заяака відправлета. Мы зв'яжемось з вами найближчим часом.",
+    "confirmFoundData" : "Надіслати запит?",
+    "foundSubmitConfirm" : "Запит надіслано",
+    "foundSubmitError" : "Помилка під час відправки запиту. Заявка не відправлена! Спробуйте іще раз.",
+    "foundTryAgain" : "Почати діалог втрати іще раз?",
 
     "itemTypeLost" : "Що ви знайшли?",
     "itemTypeLost_device" : "Прилад",
