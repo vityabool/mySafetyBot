@@ -58,8 +58,7 @@
                     "items": [
                         {
                             "type": "Image",
-                            "url": "https://mysafetybot.blob.core.windows.net/img/mysafety_logo.png",
-                            "size": "auto"
+                            "url": "https://mysafetybot.blob.core.windows.net/img/mysafety_logo.png"
                         }
                     ]
                 }

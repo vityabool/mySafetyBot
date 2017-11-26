@@ -34,6 +34,10 @@ var found = {
     phone : "",
     email : "",
     mail : "",
+
+    altphone : "",
+    altemail : "",
+    altmail : "",
     
     additioanInfo : "",
 

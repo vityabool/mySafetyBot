@@ -6,8 +6,7 @@ module.exports = [
         
         var vcard = require('../locale/ua/about.json');
 
-        var msg = new builder.Message(session)
-        .addAttachment(vcard);
+        var msg = new builder.Message(session).addAttachment(vcard);
 
         session.send(msg);
 
