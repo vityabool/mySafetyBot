@@ -233,9 +233,10 @@ module.exports = [
             if (data.itemType.bag) devType = "bag";
 
             var d = new Date();
+            var month = d.getMonth() + 1;
 
             var entry = {
-                PartitionKey: entGen.String(d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate()),
+                PartitionKey: entGen.String(d.getFullYear() + '-' + month + '-' + d.getDate()),
                 RowKey: entGen.String(guid.raw()),
                 itemType: entGen.String(devType),
                 itemDescription: entGen.String(data.itemDescription),
