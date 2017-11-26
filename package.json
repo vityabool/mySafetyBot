@@ -27,6 +27,7 @@
     "botbuilder": "^3.11.0",
     "botbuilder-cognitiveservices": "^1.1.0",
     "dotenv-extended": "^2.0.1",
+    "guid": "0.0.12",
     "nodemailer": "^4.3.1",
     "restify": "^6.0.1"
   }
