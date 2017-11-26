@@ -4,14 +4,9 @@
     "found" : "Знайшов",
     "services" : "Сервіси та продукти",
     "faq" : "Питання та відповіді",
-<<<<<<< HEAD
-    "about" : "Про компаню",
-    "greetings" : "Привіт! Я MySafety Бот! Type 'lang' anytime to change language",
-=======
     "about" : "Про компанію",
     "exit" : "Завершити",
     "greetings" : "Привіт! Я MySefety Бот! Type 'lang' anytime to change language",
->>>>>>> dev
     "continue" : "Добре. Продовжуємо?",
     "Yes" : "Так",
     "No" : "Ні",
@@ -71,17 +66,12 @@
     "rep_foundTime" : "Час знаходки: ",
     "rep_documentName" : "Ім'я на документі: ",
     "rep_documentNumber" : "Номер документа: ",
-<<<<<<< HEAD
-    "rep_contact" : "Контакт: ",
-    "rep_altcontact" : "Альтернативний номер телефону: ",
-=======
     "rep_contact_phone" : "Контактний телефон: ",
     "rep_contact_email" : "Електронна пошта: ",
     "rep_contact_mail" : "Поштова адреса: ",
     "rep_altcontact_phone" : "Альтернативний телефон: ",
     "rep_altcontact_email" : "Альтернативна електронна пошта: ",
     "rep_altcontact_mail" : "Альтернативна поштова адреса: ",
->>>>>>> dev
     "rep_additionalInfo" : "Додаткова інформация: ", 
     
     "confirm_found_email" : "Чи хочете ви надіслати заявку?",
@@ -129,10 +119,6 @@
     "confirmLostData" : "Надіслати запит?",
     "submittingRequest" : "Надсилаю запит...",
     "lostSubmitConfirm" : "Запит надіслано",
-<<<<<<< HEAD
-    "lostSubmitError" : "Помилка під час відправки запиту. Заявке не відправлена!",
-    "lostTryAgain" : "Почати діалог втрати іще раз?"
-=======
     "lostSubmitError" : "Помилка під час відправки запиту. Заявка не відправлена!",
     "lostTryAgain" : "Почати діалог втрати іще раз?",
 
@@ -168,6 +154,5 @@
     "ProductBackMain" : "Повернутись до головного меню?",
 
     "ExitMessage" : "До побачення!"
->>>>>>> dev
 
 }
