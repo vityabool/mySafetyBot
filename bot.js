@@ -12,19 +12,14 @@ var connector = new builder.ChatConnector({
 
 var bot = new builder.UniversalBot(connector, {
     localizerSettings: { 
-        defaultLocale: "en" 
+        defaultLocale: "ua" 
     }
 });
 
 bot.dialog('/', [
     function (session) {
-        session.send(h.text(session, "greetings"));
         session.beginDialog('mainmenu');
     }
-    //,
-    //function (session, resuls) {
-    //    session.beginDialog('mainmenu');
-    //}
 ]);
 
 // Dialogs definition
@@ -79,8 +74,26 @@ bot.dialog('help', require('./dialogs/help-dialog.js')).triggerAction({
             session.beginDialog(args.action, args);
         }
 
-    });
+});
 
+// Add first run dialog
+bot.on('conversationUpdate', function (message) {
+    if (message.membersAdded) {
+        message.membersAdded.forEach(function (identity) {
+            if (identity.id === message.address.bot.id) {
+                var greetings = "Hello!  I'm a MySafety Bot. \n\n In the conversation type 'help' for help, 'lang' to change language or 'main' to get back \n\n Type 'Ok' to proceed.'";
+                if (bot.settings.localizerSettings.defaultLocale == 'ua')
+                    var greetings = "Привіт! Я Бот MySafety. На протязі розмови наберіть 'help' для допомоги, 'lang' для зміни мови та 'main' для повернення в до початку. \n\n Почнемо розмову?"
+                if (bot.settings.localizerSettings.defaultLocale == 'ru')
+                    var greetings = "Привет! Я Бот MySafety. В течении разговора наберите 'help' для помощи, 'lang' для изменения языка и 'main' для возврата в начало. \n\n ПНачнем разговор?"
+
+                bot.send(new builder.Message()
+                    .address(message.address)
+                    .text(greetings));
+            }
+        });
+    }
+});
 // Setup Restify Server
 var server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3388, function () {

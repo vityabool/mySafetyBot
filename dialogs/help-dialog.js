@@ -5,7 +5,7 @@ module.exports =
 [
     function (session) {
         session.send("help_message");
-        builder.Prompts.choice(session, "ok_to_continue", ["OK"]);
+        builder.Prompts.confirm(session, "ok_to_continue");
     },
     function (session, result) {
         session.endDialog();
