@@ -1,5 +1,5 @@
 {
-    "questionAreaDescription" : "Чем я могу вам помочь?",
+    "questionAreaDescription" : "Чем я могу вам помочь? ('lang' -  смена языка, 'main' - главное меню)",
     "lost" : "Потерял",
     "found" : "Нашел",
     "services" : "Сервисы и Продукты",
@@ -10,22 +10,8 @@
     "continue" : "Хорошо. Продолжаем?",
     "Yes" : "Да",
     "No" : "Нет",
-    "ReturnMainMenu" : "Я ответил на все вопросы в этом направлении. Вернуться к списку вопросов?",
-    "DoneInLost" : "Ваш вопрос отправлен!",
-    "Buy" : "Спасибо! До свиданья!",
-    "end_of_branch" : "Это все, чем я могу помочь. Перейти в главное меню?",
 
-    "OurPhoneNumber" : "Позвонииь нам 044-250-00-00",
-    "LinkOnOurWebSite" : "Заполните форму на сайте http://www.mysafety.com.ua",
-
-    "lost_callcenter" : "Call our callcenter",
-    "lost_make_lost_request" : "Craete lost request",
-    "lost_block_phone" : "Lock your phone",
-    "lost_callcenter_number": "Callcenter number is 0 800 508 112",
-    "lost_block_phone_instructions" : "How to block your lost phone: please follow the steps.",
-    "lost_nextsteps" : "Choose what has happend:",
-
-    "help_message" : "Наберите: 'mian' для перехода в главное меню; 'lang' для выбора языка; 'ok' для продолжения",
+    "help_message" : "Наберите: 'mian' для перехода в главное меню; 'lang' для выбора языка; 'да' для продолжения",
     "ok_to_continue" : "Продолжим?",
 
 

@@ -14,7 +14,7 @@
 
                             {
                                 "type": "TextBlock",
-                                "text": "Контакти",
+                                "text": "Contacts",
                                 "weight": "bolder",
                                 "size": "extraLarge",
                                 "spacing": "none"
@@ -22,7 +22,7 @@
 
                             {
                                 "type": "TextBlock",
-                                "text": "Для захисту ваших речей і близьких людей ви можете з нами зв'язатися за зручним для вас номеру телефону або за допомогою електронної адреси",
+                                "text": "To protect your belongings and beloved ones, you can contact us over telephone or by e-mail.",
                                 "size": "small",
                                 "wrap": true
                             },
@@ -47,7 +47,7 @@
                             
                             {
                                 "type": "TextBlock",
-                                "text": "вул. Анрі Барбюса, 5-В, секція 2, офіс 8, 03150, м. Київ ",
+                                "text": "Anri Barbusa Str., 5-В, section 2, office 8, 03150, Kiev, Ukraine",
                                 "size": "small",
                                 "wrap": true
                             }
@@ -69,7 +69,7 @@
         "actions": [
             {
                 "type": "Action.OpenUrl",
-                "title": "Більше інформації",
+                "title": "More information",
                 "url": "http://mysafety.ua/ua/contacts?s=CDC0197FBA9FBD309B35BFD378ECCF6496FAEC58"
             }
         ]

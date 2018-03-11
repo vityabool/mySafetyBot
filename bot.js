@@ -13,12 +13,14 @@ var connector = new builder.ChatConnector({
 var bot = new builder.UniversalBot(connector, {
     localizerSettings: { 
         defaultLocale: "ua" 
-    }
+    },
+    storage: new builder.MemoryBotStorage()
 });
 
 bot.dialog('/', [
     function (session) {
         session.beginDialog('mainmenu');
+        
     }
 ]);
 
@@ -82,7 +84,9 @@ bot.on('conversationUpdate', function (message) {
         message.membersAdded.forEach(function (identity) {
             if (identity.id === message.address.bot.id) {
 
-                var greetings = "Привіт/Привет/Hi! Розпочнемо/Начнем/Start?";
+                var greetings = "Привіт/Привет/Hi!";
+                // Looks like there is no way to get loacale when the user joins. 
+                // The only option is to have generalized message
 /*                if (bot.settings.localizerSettings.defaultLocale == 'ua')
                     var greetings = "Привіт! Я Бот MySafety. На протязі розмови наберіть 'help' для допомоги, 'lang' для зміни мови та 'main' для повернення в до початку. \n\n Почнемо розмову?"
                 if (bot.settings.localizerSettings.defaultLocale == 'ru')

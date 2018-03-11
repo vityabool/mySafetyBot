@@ -1,21 +1,19 @@
 var builder = require('botbuilder');
 var h = require('../helper.js');
 var data = Object.create(require('../models/found.js'));
-//const sgMail = require('@sendgrid/mail');
 require('dotenv-extended').load();
-//sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 var storage = require('azure-storage');
 var guid = require('guid');
 var nodemailer = require('nodemailer');
 
-
+// Long waterfall dialog aimed to fill Lost form.
+// The result is written to the Storage table
+// Storage explorer could be downloaded at https://azure.microsoft.com/en-us/features/storage-explorer/
+// And sent to e-mail
 
 module.exports = [
     function (session) {
         // Choose item 
-        //session.send("itemType");
-        //session.conversationData.formData = data;
-        //var data = Object.create(require('../models/found.js'));
         var options = [
             h.text(session,"itemType_device"),
             h.text(session,"itemType_documents"),
@@ -33,18 +31,16 @@ module.exports = [
         switch (result.response.entity) {
             case h.text(session,"itemType_device"): data.itemType.device = true; break;
             case h.text(session,"itemType_documents"): data.itemType.document = true; break;
-            case h.text(session,"itemType_keys"): data.itemType.device = true; break;
-            case h.text(session,"itemType_animal"): data.itemType.device = true; break;
-            case h.text(session,"itemType_bag"): data.itemType.device = true; break;
+            case h.text(session,"itemType_keys"): data.itemType.keys = true; break;
+            case h.text(session,"itemType_animal"): data.itemType.animal = true; break;
+            case h.text(session,"itemType_bag"): data.itemType.bag = true; break;
             case h.text(session,"itemType_other"): 
                 data.itemType.other = true; 
-                //session.beginDialog('found-other');
             break;
             default: 
                 session.send("I do not understand.");
             } 
         
-            //session.send(JSON.stringify(data.itemType));
         if (data.itemType.other)    
             builder.Prompts.text(session, "otherItemType");
         else        
@@ -133,8 +129,6 @@ module.exports = [
         if (data.contactMethod.email) data.email = result.response;
         if (data.contactMethod.mail) data.mail = result.response;
         
-        //session.send(JSON.stringify(data));
-
         var options = [
             h.text(session,"contact_phone"),
             h.text(session,"contact_email"),
@@ -171,15 +165,11 @@ module.exports = [
         if (data.contactMethodAlt.email) data.altemail = result.response;
         if (data.contactMethodAlt.mail) data.altmail = result.response;
 
-        //session.send(JSON.stringify(data));
-
         builder.Prompts.text(session, "additioanInfo");
     },
 
     function (session, result) {
         data.additioanInfo = result.response;
-
-        //session.send(JSON.stringify(data));
 
         var contact = "";
         if (data.contactMethod.phone) contact = h.text(session,"rep_contact_phone") + data.phone;
@@ -218,6 +208,7 @@ module.exports = [
 
     function (session, result) {
         if (result.response) {
+            
             // Writing record to Storage Table
             
             session.send("submittingRequest");

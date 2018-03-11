@@ -8,13 +8,15 @@ var storage = require('azure-storage');
 var guid = require('guid');
 var nodemailer = require('nodemailer');
 
+// Long waterfall dialog aimed to fill Found form.
+// The result is written to the Storage table
+// Storage explorer could be downloaded at https://azure.microsoft.com/en-us/features/storage-explorer/
+// And sent to e-mail
+
 module.exports = 
 [
     function (session) {
         // Choose item 
-        //session.send("itemType");
-        //session.conversationData.formData = data;
-        //var data = Object.create(require('../models/found.js'));
         var options = [
             h.text(session,"itemTypeLost_device"),
             h.text(session,"itemTypeLost_documents"),
@@ -23,9 +25,7 @@ module.exports =
             h.text(session,"itemTypeLost_bag"),
             h.text(session,"itemTypeLost_other"),
         ];
-            
-            builder.Prompts.choice(session,"itemTypeLost", options);
-            
+        builder.Prompts.choice(session,"itemTypeLost", options);          
     },
 
     function (session, result) {
@@ -37,13 +37,11 @@ module.exports =
             case h.text(session,"itemTypeLost_bag"): data.itemType.bag = true; break;
             case h.text(session,"itemTypeLost_other"): 
                 data.itemType.other = true; 
-                //session.beginDialog('found-other');
             break;
             default: 
                 session.send("I do not understand.");
             } 
         
-            //session.send(JSON.stringify(data.itemType));
         if (data.itemType.other)    
             builder.Prompts.text(session, "otherItemTypeLost");
         else        
@@ -63,33 +61,26 @@ module.exports =
     function (session, result) {
         if (!data.itemDescription)
             data.itemDescription = result.response;
-        //session.send(JSON.stringify(data));
         builder.Prompts.text(session, "nameLost");
     },
 
     function (session, result) {
         data.name = result.response;
-        //session.send(JSON.stringify(data));
         builder.Prompts.text(session, "cityLost");
     },
 
     function (session, result) {
         data.city = result.response;
-        //session.send(JSON.stringify(data));
         builder.Prompts.text(session, "idLost");
     },
 
     function (session, result) {
         data.id = result.response;
-        //session.send(JSON.stringify(data));
         builder.Prompts.time(session, "foundTimeLost");
     },
 
     function (session, result, next) {
-        //session.send(JSON.stringify(data));
-        //session.send(result.response);
         data.lostTime = builder.EntityRecognizer.resolveTime([result.response]);
-        //session.send(data.lostTime.toLocaleDateString() + " " + data.lostTime.toLocaleTimeString());
         if (data.itemType.device) {
             builder.Prompts.confirm(session, "blockSIM");
         } 
@@ -113,20 +104,18 @@ module.exports =
 
     function (session, result) {
         data.phone = result.response;
-        //session.send(JSON.stringify(data));
         builder.Prompts.text(session, "phoneLostAlt");
     },
 
     function (session, result) {
         data.additionalPhone = result.response;
-        //session.send(JSON.stringify(data));
         builder.Prompts.text(session, "additioanInfoLost");
     },
 
     function (session, result) {
         data.additioanInfo = result.response;
 
-        // Do some mulilanguage stuff
+        // Doing some multilanguage stuff
         if (data.simBlock) 
             var sim = h.text(session,"Yes");
         else 
@@ -169,7 +158,6 @@ module.exports =
     function (session, result) {
         if (result.response) {
             // Writing record to Storage Table
-            
             session.send("submittingRequest");
 
             var entGen = storage.TableUtilities.entityGenerator;
@@ -228,7 +216,7 @@ module.exports =
                     } else {
                       console.log('Email sent: ' + info.response);
                       session.send(h.text(session,"lostSubmitConfirm"));
-                      //console.log(result);
+
                       session.replaceDialog('mainmenu');
                     }
                   }); 

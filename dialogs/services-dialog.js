@@ -1,6 +1,7 @@
 var builder = require('botbuilder');
 var h = require('../helper.js');
 
+// Products dialog
 module.exports = [
     function (session) {
         var msg = new builder.Message(session);

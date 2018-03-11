@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/vityabool/mySafetyBot#readme",
   "dependencies": {
-    "@sendgrid/mail": "^6.1.4",
-    "azure-storage": "^2.6.0",
-    "botbuilder": "^3.11.0",
+    "adaptivecards": "^1.0.0",
+    "azure-storage": "^2.8.1",
+    "botbuilder": "^3.14.0",
     "botbuilder-cognitiveservices": "^1.1.0",
     "dotenv-extended": "^2.0.1",
     "guid": "0.0.12",
-    "nodemailer": "^4.3.1",
-    "restify": "^6.0.1"
+    "nodemailer": "^4.6.2",
+    "restify": "^6.3.4"
   }
 }

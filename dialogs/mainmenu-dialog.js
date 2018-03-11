@@ -1,10 +1,11 @@
 var builder = require('botbuilder');
 
+
+// Main menu dailog
 module.exports =
 [    
     function (session) {
-        // session.send("greetings");
-        //session.send('Hello, I am mySefety Bot. How can I help you?')
+
         var options = [
             session.localizer.gettext(session.preferredLocale(), "lost"),
             session.localizer.gettext(session.preferredLocale(), "found"),
@@ -15,8 +16,8 @@ module.exports =
         ];
 
         builder.Prompts.choice(session, "questionAreaDescription", options);
-
     },
+
     function (session, result) {
             if (result.response.entity) {
              switch (result.response.entity) {
